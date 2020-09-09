@@ -1,0 +1,55 @@
+<h3>
+  List of Users
+</h3>
+<div>
+  <ul *ngFor="let item of usersObjects">
+    <li>Name:{{ item.username }}</li>
+    <span class="btn btn-primary" [routerLink]="['/update', item._id]">
+      <i class="fa fa-spinner"></i> Edit</span
+    >
+    &nbsp;
+    <span class="btn btn-primary" (click)="deleteproduct(item._id)"
+      ><i class="fa fa-trash"></i> Delete</span
+    >
+    &nbsp;
+    <span class="btn btn-primary" [routerLink]="['/addgroup', item._id]">
+      <i class="fa fa-spinner"></i> Add Group</span
+    >
+  </ul>
+</div>
+<div>
+  <h4>Add users</h4>
+</div>
+
+<h3>
+  List of Groups
+</h3>
+<div>
+  <ul *ngFor="let item of groupObjects">
+    <li>Name:{{ item.group_name }}</li>
+    <li>Members:{{ item.members }}</li>
+    <span class="btn btn-primary" (click)="deletegroup(item._id)"
+      ><i class="fa fa-trash"></i> Delete</span
+    >
+    &nbsp;
+    <span class="btn btn-primary" [routerLink]="['/groupList', item._id]"
+      ><i class="fa fa-trash"></i> Delete Memebers</span
+    >
+    &nbsp;
+    <span class="btn btn-primary" [routerLink]="['/createChannel', item._id]">
+      <i class="fa fa-spinner"></i> Create Channel</span
+    >
+    &nbsp;
+    <span class="btn btn-primary" [routerLink]="['/deleteChannel', item._id]">
+      <i class="fa fa-spinner"></i> Delete Channel</span
+    >
+    &nbsp;
+    <span class="btn btn-primary" [routerLink]="['/addChannelMember', item._id]">
+      <i class="fa fa-spinner"></i> Add Channel Members</span
+    >
+    &nbsp;
+    <span class="btn btn-primary" [routerLink]="['/deleteChannelMember', item._id]">
+      <i class="fa fa-spinner"></i> Delete Channel Memebers</span
+    >
+  </ul>
+</div>

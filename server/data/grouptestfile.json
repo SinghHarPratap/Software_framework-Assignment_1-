@@ -1,0 +1,21 @@
+[
+  {
+    "groupname": "FirstGroup",
+    "members": [
+      "super"
+    ],
+    "superadmin": "super",
+    "groupadmin": [
+      "super"
+    ],
+    "channel": [
+      {
+        "channelname": "myfirschannel",
+        "channelmembers": [
+          "super"
+        ]
+      }
+    ],
+    "groupassis": ""
+  }
+]

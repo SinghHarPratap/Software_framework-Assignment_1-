@@ -1,0 +1,60 @@
+<h1>Add new User</h1>
+<!-- <h4>Name: {{ name }}</h4>
+<h4>Age: {{ age }}</h4>
+<h4>Date Of Birth: {{ birthday }}</h4>
+<h4>Email: {{ email }}</h4>
+<h4>Role: {{ role }}</h4> -->
+<div class="container">
+  <button (click)="newGroup()">Create Group</button>
+</div>
+
+<div class="container">
+  <form (submit)="addnewProduct($event)">
+    <div class="form-group">
+      <label for="id"> ID</label>
+      <input
+        type="number"
+        class="form-control"
+        id="id"
+        [(ngModel)]="id"
+        (ngModelChange)="checkvaildid($event)"
+        name="id"
+        placeholder="ID"
+      />
+      <div [@iderrorState]="stateName" class="alert alert-warning" id="iderrormsg" role="alert">
+        {{ iderrormsg }} {{ iderrormsg2 }}
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="id"> Name</label>
+      <input type="text" class="form-control" id="name" [(ngModel)]="username" name="name" />
+    </div>
+    <div class="form-group">
+      <label for="id">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        [(ngModel)]="password"
+        name="password"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="id">Age</label>
+      <input type="number" class="form-control" id="age" [(ngModel)]="age" name="age" />
+    </div>
+    <div class="form-group">
+      <label for="id">Role</label>
+      <input type="text" class="form-control" id="role" [(ngModel)]="role" name="role" />
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">
+        <i class="fa fa-plus-square"></i> Create New User
+      </button>
+    </div>
+    <div [@noticeState]="noticeName" class="alert alert-warning" role="alert">
+      {{ newProductMessage }}
+    </div>
+  </form>
+</div>

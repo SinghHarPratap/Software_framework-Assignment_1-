@@ -1,0 +1,40 @@
+<p>update works!</p>
+<div class="container">
+  <form>
+    <div class="form-group">
+      <label for="id"> ID</label>
+      <input
+        type="number"
+        class="form-control"
+        id="id"
+        [(ngModel)]="id"
+        name="id"
+        placeholder="ID"
+        readonly
+      />
+    </div>
+    <div class="form-group">
+      <label for="id">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="username"
+        [(ngModel)]="username"
+        name="username"
+      />
+    </div>
+    <div class="form-group">
+      <label for="id">Age</label>
+      <input type="number" class="form-control" id="age" [(ngModel)]="age" name="age" />
+    </div>
+    <div class="form-group">
+      <label for="id">price</label>
+      <input type="text" class="form-control" id="role" [(ngModel)]="role" name="role" />
+    </div>
+    <div class="form-group">
+      <button type="button" (click)="update(idparam)" class="btn btn-primary">
+        <i class="fa fa-edit"></i> Update
+      </button>
+    </div>
+  </form>
+</div>
