@@ -87,12 +87,12 @@ module.exports = {
         }
       })
 
-      socket.on('disconnect', () => {
-        chat.emit('disconnect')
-        for (let i = 0; i < socketRoom.length; i++) {
-          if (socketRoom[i][0] == socket.id) {
-            socketRoom.splice(i, 1)
-          }
+      // socket.on('disconnect', () => {
+      //   chat.emit('disconnect')
+      //   for (let i = 0; i < socketRoom.length; i++) {
+      //     if (socketRoom[i][0] == socket.id) {
+      //       socketRoom.splice(i, 1)
+      //     }
         }
         for (let j = 0; j < socketRoomnum.length; j++) {
           if (socketRoomnum[j][0] == socket.room) {
