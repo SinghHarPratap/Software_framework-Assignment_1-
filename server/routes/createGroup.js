@@ -1,8 +1,8 @@
-// module.exports = function(db, app) {
-//   app.post('/createGroup', function(req, res) {
-//     if (!req.body) {
-//       return res.sendStatus(400)
-//     }
+module.exports = function(db, app) {
+  app.post('/createGroup', function(req, res) {
+    if (!req.body) {
+      return res.sendStatus(400)
+    }
 
     newgroup = req.body
     group_name = req.body.group_name
